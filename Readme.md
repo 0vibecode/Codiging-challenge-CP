@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Coding Challenge CP
 ### How to pull the latest code
 - If you are the owner of repo, run the following command to get the latest code. 
@@ -41,3 +42,7 @@ git merge upstream/main
 # Coding Challenge Cp
 # pythonCode
 >>>>>>> 02b7e73 (Changes in readme)
+=======
+# Coding Challenge Cp
+#
+>>>>>>> dc75a9c (Changes in readme)
