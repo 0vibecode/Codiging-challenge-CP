@@ -1,2 +1,1 @@
-# Coding Challenge Cp
-# pythonCode
+# Coding Challenge CP
