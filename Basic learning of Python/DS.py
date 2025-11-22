@@ -16,3 +16,4 @@ if __name__ == "__main__":
     print("Address of myNode1 is ",myNode1)
     print("Address of myNode1 in myNode->next is ",myNode.next)
     print(myNode1.next)
+    
