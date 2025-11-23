@@ -19,11 +19,17 @@ int main() {
     // printf("Address of Node N1 is %p \n ", &N1);
     // printf("Address of Node N2 is %p \n ", &N2);
     // printf("Address of Node N2 in N1.Next is %p \n ", N1.next);
-    while (ptr->next != NULL)  // Use of arrow operator in C 
+    do
     {
+        /* code */
+          printf("Value is %d \n", ptr->i);  
+     ptr = ptr->next; 
+    } while  (ptr->next != NULL);
+
+    
      printf("Value is %d \n", ptr->i);  
      ptr = ptr->next; 
-    }
+    
     
     // for(int i=0;i<4;i++){
     //     if(ptr->next != NULL){
