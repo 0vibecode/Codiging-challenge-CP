@@ -10,7 +10,7 @@ void display(struct LL *temp){
         printf("The value of LL data is %d \n", t->data);
         t = t->next;
     }; 
-     printf("The value of LL data is %d \n", t->data); // For the null pointer value - this is temprory fix not a good good solution
+     //printf("The value of LL data is %d \n", t->data); // For the null pointer value - this is temprory fix not a good good solution
 }
 int main() {
     printf("LL methods in C \n");
@@ -21,7 +21,7 @@ int main() {
     l1.next = &l2;
     l2.data = 25;
     l2.next = &l3;
-    l3.data = 30;
+    l3.data = 00; // Terminating node of LL
     l3.next = NULL;
     display(lptr);
     
