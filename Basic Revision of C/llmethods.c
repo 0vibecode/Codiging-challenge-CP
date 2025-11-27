@@ -10,27 +10,27 @@ void display(struct LL *temp){
         printf("The value of LL data is %d \n", temp->data);
         temp = temp->next;
     }; 
-     //printf("The value of LL data is %d \n", t->data); // For the null pointer value - this is temprory fix not a good good solution
+    printf("The value of LL data is %d \n", temp->data); // For the null pointer value - this is temprory fix not a good good solution
 } 
 struct LL* insert(struct LL *temp,int data){
-    //struct LL *t = temp;
+    struct LL *t = temp;
     if (temp->next != NULL){
         
-        while (temp->next != NULL){
+        while (temp->next != NULL){  // traverse to last node
             temp = temp->next;
         }
         struct LL *newLL = (struct LL*)malloc(sizeof(struct LL));
         newLL->data = data;
         newLL ->next = NULL;
         temp->next = newLL;
-        return temp;
+        return t;
     } else {
         printf("Its the first genesis Node \n");
         struct LL *newLL = (struct LL*)malloc(sizeof(struct LL));
         newLL->data = data;
         newLL ->next = NULL;
         temp->next = newLL;
-        return temp;
+        return t;  // returning the first node
     }
     
 }
