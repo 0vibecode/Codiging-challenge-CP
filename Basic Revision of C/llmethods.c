@@ -32,7 +32,27 @@ struct LL* insert(struct LL *temp,int data){
         temp->next = newLL;
         return t;  // returning the first node
     }
-    
+}
+struct LL* delete(struct LL *temp, int pos){
+    struct LL *t = temp;
+    int count=0;
+    struct LL *prev;
+    if (temp->next != NULL){
+        while(temp->next != NULL && count != pos){
+            if (count == pos -1){
+                prev = temp;
+            }
+            temp = temp->next;
+            count++;
+        }
+        struct LL *new = temp->next;
+        prev->next = new; // seting up the new variable 
+        free(temp);
+        return t;
+    } else {
+        printf("You are missing the index or node dont exists. \n ");
+        return t;
+    }
 }
 int main() {
     printf("LL methods in C \n");
@@ -44,7 +64,9 @@ int main() {
     lptr = insert(lptr,45);
     lptr = insert(lptr,55);
     lptr = insert(lptr,65);
-    
+    display(lptr);
+    printf("After deletion of node \n");
+    lptr = delete(lptr,3);    
     display(lptr);
     
 return 0;
