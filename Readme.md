@@ -38,12 +38,20 @@ git merge upstream/main
 - Then the owner will review all the changes and conflicts to make sure to rebase the correct branch.    
 
 
-### Learning goals 
+### Learning goals Achieved 
 We will learn DSA and CP concepts in two programming languages C/C++ and Python at the same time. Please follow the repo accordingly. Following is the list of all concepts and codes as per each session. 
 1. Setup of Git and repo structure - Done
 2. Basic implementation of pointer in C - Done
 3. Basic implementation of classes DS in Python - Done 
-4. Basic implementation Linkedlist traversal in C and Python - Done
+4. Basic implementation Linkedlist traversal in C and Python - Done 
+ 
+### Learning goals pending 
+1. LL implementation of methods
+2. LL implementation of Stacks and Queue
+3. LL implementation of of different types - SINGLY,DOUBLY
+4. OOP CONCEPTS - C++ AND PYTHON
+5. ADVANCE CONCEPT OF OOP
+6. DESIGN PATTERNS AND APPLICATION
 ## Some coding platforms for CP 
 1. Codeforces 
 2. Leetcode
