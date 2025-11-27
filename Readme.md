@@ -36,3 +36,14 @@ git merge upstream/main
 ------- 
 - To merge the code from the contributor, Make sure you have pushed all the necessary changes to your forked branch. Then create a pull request using CLI/VScode/on Github website. 
 - Then the owner will review all the changes and conflicts to make sure to rebase the correct branch.  
+## Some coding platforms for CP 
+1. Codeforces 
+2. Leetcode
+3. Hacker rank
+4. InterviewBit
+5. GeeksforGeeks
+
+## Some coding platform other than CP
+1. Google summer of code 
+2. MLH.io
+3. Hacktoberfest each year 
