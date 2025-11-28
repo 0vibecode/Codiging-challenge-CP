@@ -33,7 +33,7 @@ struct LL* insert(struct LL *temp,int data){
         return t;  // returning the first node
     }
 }
-struct LL* delete(struct LL *temp, int pos){
+struct LL* delete(struct LL *temp, int pos){ // Edge cases of first and last node deletion is not working here. It only work for deletion in the LL with positions. 
     struct LL *t = temp;
     int count=0;
     struct LL *prev;
@@ -54,6 +54,14 @@ struct LL* delete(struct LL *temp, int pos){
         return t;
     }
 }
+struct LL * createLL(int size){
+    struct LL *newLL = (struct LL*)malloc(size * sizeof(struct LL));
+    return newLL;
+}
+struct LL * createStack(struct LL * temp){
+ // lets implement in separate file
+}
+
 int main() {
     printf("LL methods in C \n");
     LL l1;
