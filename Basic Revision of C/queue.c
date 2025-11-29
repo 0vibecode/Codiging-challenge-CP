@@ -20,10 +20,6 @@ struct Queue * createQueueNode(int data, int size){
     s->data = data;
     return s;
 }
-struct Queue * createNode(){
-    struct Queue *s = (struct Queue *)malloc(sizeof(struct Queue));
-    return s;
-}
 
 
 int isEmpty(struct Queue *s){
@@ -61,15 +57,17 @@ struct Queue * pop(struct Queue *s){
     if(isEmpty(s)){
         return s;
     } else {
-        struct Queue *temp = s->first;
-        // return node 2 address after deleting node 3
-        struct Queue *p = s->next;
-        p->first = s->next;
-        p->prev = NULL;
-        //index update
-        //delete operation
+        struct Queue *temp = s->first; // address of first node for FIFO
+         struct Queue *ntemp = s->next; // address of next node for FIFO
+        // update the first node
+        ntemp->first = temp->next;
+        while (temp->next != NULL)
+        {
+            temp->first = ntemp;
+            temp = temp->next;
+        }
         free(temp);
-        return p;
+        return ntemp;
     }
 
 }
@@ -78,7 +76,8 @@ void displayQueue(struct Queue *s){
     if(isEmpty(s)){
         printf("Nothing to return - Queue is Empty. \n");
     } else {
-        printf("Value at index %d is %d \n",s->index,s->data);
+        struct Queue *q = s->first;
+        printf("Value at index %d is %d \n",q->index,q->data);
         while(temp->next != NULL){
             temp = temp->next;
             printf("Value at index %d is %d \n",temp->index,temp->data);
