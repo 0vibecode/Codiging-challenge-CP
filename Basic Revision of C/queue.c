@@ -58,12 +58,13 @@ struct Queue * pop(struct Queue *s){
         return s;
     } else {
         struct Queue *temp = s->first; // address of first node for FIFO
-         struct Queue *ntemp = s->next; // address of next node for FIFO
-        // update the first node
+         struct Queue *ntemp = temp->next; // address of second node for FIFO
+        // update the first node to the next node
         ntemp->first = temp->next;
         while (temp->next != NULL)
         {
             temp->first = ntemp;
+            temp->index = temp->index-1;
             temp = temp->next;
         }
         free(temp);
@@ -98,7 +99,7 @@ int main() {
     displayQueue(st);
     printf("Now doing the pop operation. \n");
     st=pop(st);
-    st=pop(st);
+    //st=pop(st);
     displayQueue(st);
     
 return 0;
