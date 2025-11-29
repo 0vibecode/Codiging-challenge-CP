@@ -4,18 +4,22 @@ typedef struct Stack{
     int size;
     int index;
     struct Stack *next;
+    struct Stack *prev;
 }Stack;
-// isEmpty, isFull, push,pop,createStack
+// isEmpty, isFull,createNode,push,pop,createStack
 
 struct Stack * createStackNode(int size){
-    struct Stack *p = (struct Stack *)malloc(sizeof(struct Stack));
-    p->size = size;
-    p->next = NULL;
-    p->index =0;
-    return p;
+    struct Stack *s = (struct Stack *)malloc(size * sizeof(struct Stack));
+    s->size = size;
+    s->index = 0;
+    s->next = NULL;
+    s->prev = NULL;
+    s->data = 0;
+    return s;
 }
-struct Stack * createNode(struct Stack *p){
-
+struct Stack * createNode(){
+    struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
+    return s;
 }
 struct Stack * push(struct Stack *p, int val){
     struct Stack *first = p;
@@ -27,8 +31,8 @@ struct Stack * push(struct Stack *p, int val){
     }
     return first;
 }
-int isEmpty(struct Stack *p){
-    if(p->next == NULL){
+int isEmpty(struct Stack *s){
+    if(s->index == 0 && s->prev == NULL && s->next == NULL){
         print("The stack is empty \n");
         return 1; // True
     }
@@ -41,7 +45,12 @@ int isFull(struct Stack *p){
     }
     return 0; // false
 }
+struct Stack * push(struct Stack *s, int data){
 
+}
+struct Stack * pop(struct Stack *s){
+
+}
 int main() {
     printf("Stack Implementation \n");
 return 0;
