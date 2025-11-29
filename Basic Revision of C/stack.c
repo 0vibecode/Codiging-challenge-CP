@@ -9,7 +9,7 @@ typedef struct Stack{
 // isEmpty, isFull,createNode,push,pop,createStack
 
 struct Stack * createStackNode(int size){
-    struct Stack *s = (struct Stack *)malloc(size * sizeof(struct Stack));
+    struct Stack *s = (struct Stack *)malloc( sizeof(struct Stack));
     s->size = size;
     s->index = 0;
     s->next = NULL;
@@ -21,16 +21,8 @@ struct Stack * createNode(){
     struct Stack *s = (struct Stack *)malloc(sizeof(struct Stack));
     return s;
 }
-struct Stack * push(struct Stack *p, int val){
-    struct Stack *first = p;
-    if(isFull(p)){
-        return first; // stack is full
-    } else {
-        p->data = val; // data updated
-        p->next = p+1; // something not correct here 
-    }
-    return first;
-}
+
+
 int isEmpty(struct Stack *s){
     if(s->index == 0 && s->prev == NULL && s->next == NULL){
         print("The stack is empty \n");
@@ -38,14 +30,27 @@ int isEmpty(struct Stack *s){
     }
     return 0; // false
 }
-int isFull(struct Stack *p){
-    if(p->index == p->size){
+int isFull(struct Stack *s){
+    if(s->index == s->size){
         print("The stack is Full \n");
         return 1; //true
     }
     return 0; // false
 }
 struct Stack * push(struct Stack *s, int data){
+    // check if isFull
+    if(isFull(s)){
+        return s;
+    } else {
+        struct Stack *newNode = (struct Stack *)malloc( sizeof(struct Stack));
+        newNode->index = s->index+1;
+        newNode->size = s->size;
+        newNode ->data = data;
+        newNode->next = s->next;
+        newNode->prev = s;
+        s->next = newNode;
+        return newNode;
+    }
 
 }
 struct Stack * pop(struct Stack *s){
