@@ -60,15 +60,18 @@ struct Queue * pop(struct Queue *s){
         struct Queue *temp = s->first; // address of first node for FIFO
          struct Queue *ntemp = temp->next; // address of second node for FIFO
         // update the first node to the next node
-        ntemp->first = temp->next;
-        while (temp->next != NULL && temp->prev != NULL) //need to fix here 
+        struct Queue *newfirst = ntemp;
+        ntemp->first = ntemp;
+        while (ntemp->next != NULL ) //need to fix here 
         {
-            temp->index = temp->index-1;
-            temp->first = ntemp;
-            temp = temp->next;
+            ntemp->index = ntemp->index-1;
+            ntemp->first =  newfirst;
+            //temp->first = ntemp;
+            ntemp = ntemp->next;
         }
+        //ntemp->first = ntemp;
         free(temp);
-        return ntemp;
+        return newfirst;
     }
 
 }
