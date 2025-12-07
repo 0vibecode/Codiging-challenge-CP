@@ -69,4 +69,12 @@ We will learn DSA and CP concepts in two programming languages C/C++ and Python 
 1. Google summer of code 
 2. MLH.io
 3. Hacktoberfest each year 
+4. Advent of code
+
+## Best practices and Guidelines
+We have standard guidelines for different programming languages to write better code. PLEASE FOLLOW IT based on your programming languages.     
+## C++ reference 
+1. cppreference.com is good resource
+2. C++ package manager vcpkg etc.
+3. c++ core community guideline for best programming practices.   
 
