@@ -6,6 +6,7 @@ class Complex{
         Complex(void); // default constructor
         Complex(int x,int y); //parametrized constructor
         Complex(int x); //constructor overloading
+        Complex(Complex &obj); //copy constructor
         void display(void);
 };
 Complex::Complex(void){
@@ -23,6 +24,11 @@ Complex::Complex(int x){
 void Complex::display(){
     cout<<"complex number is "<<a<<"+"<<b<<"i"<<endl;
 }
+Complex::Complex(Complex &obj){
+    cout<<"Copy constructor called!!!!!!"<<endl;
+    a = obj.a;
+    b= obj.b;
+}
 int main() {
 cout << "Constructors in C++" << endl;
 Complex c1;
@@ -31,5 +37,7 @@ Complex c2(2,3);
 c2.display();
 Complex c3(5);
 c3.display();
+Complex c4 = c2;
+c4.display();
 return 0;
 }
