@@ -31,7 +31,7 @@ class Base{
             return num;
         }
 };
-class Derived:private Base {
+class Derived:public Base {
     public:
         int derived;
         Derived(int setnum) : Base(setnum) {
@@ -44,7 +44,7 @@ class Derived:private Base {
         }
         void displayBaseDerived(void){
             //cout<<"The value of num from Base class is "<<num<<endl;
-            getBase();
+            //getBase();
             cout<<"The value of derived is "<<derived<<endl;
         }
         void process(){
@@ -59,6 +59,8 @@ Derived D(12); // derived class calling constructor of base class
 D.displayDerived();
 D.displayBaseDerived();
 D.process();
+int temp = D.getNum();
+cout<<"Value from private "<<temp<<endl;
 //D.displayBase(); 
 return 0;
 }
