@@ -8,8 +8,9 @@ Visiblity mode of base class to derived class
 
 */
 class Base{
+    int num;
     public:
-        int num;
+        //int num;
         Base(int newnum){
             num = newnum;
         }
@@ -20,19 +21,27 @@ class Base{
             cout<<"The value of num is "<<num<<endl;
             cout<<"--------------END-----------------"<<endl;
         }
+        void getBase(void){
+            cout<<"--------------Start-----------------"<<endl;
+            cout<<"Calling FROM THE BASE CLASS USING GETTER "<<endl;
+            cout<<"The value of num is "<<num<<endl;
+            cout<<"--------------END-----------------"<<endl;
+        }
 };
 class Derived:public Base {
     public:
         int derived;
-        Derived(int setnum){
-            num = setnum; // setting num in base class using derived class constructor
+        Derived(int setnum) : Base(setnum) {
+            //num = setnum; // setting num in base class using derived class constructor
+            //Base(setnum); // Not possible 
             derived = 25; // setting derived variable in derived class in constructor
         }
         void displayDerived(void){
             cout<<"The value of derived is "<<derived<<endl;
         }
         void displayBaseDerived(void){
-            cout<<"The value of num from Base class is "<<num<<endl;
+            //cout<<"The value of num from Base class is "<<num<<endl;
+            getBase();
             cout<<"The value of derived is "<<derived<<endl;
         }
 };
@@ -41,6 +50,6 @@ cout << "Inheritance in C++" << endl;
 Derived D(12); // derived class calling constructor of base class
 D.displayDerived();
 D.displayBaseDerived();
-D.displayBase(); // 
+//D.displayBase(); 
 return 0;
 }
