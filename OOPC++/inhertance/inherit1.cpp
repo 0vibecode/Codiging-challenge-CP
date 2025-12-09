@@ -27,6 +27,9 @@ class Base{
             cout<<"The value of num is "<<num<<endl;
             cout<<"--------------END-----------------"<<endl;
         }
+        int getNum(){
+            return num;
+        }
 };
 class Derived:public Base {
     public:
@@ -44,12 +47,18 @@ class Derived:public Base {
             getBase();
             cout<<"The value of derived is "<<derived<<endl;
         }
+        void process(){
+            int result;
+            result = derived*getNum();
+            cout<<"Processed result is "<<result<<endl;
+        }
 };
 int main() {
 cout << "Inheritance in C++" << endl;
 Derived D(12); // derived class calling constructor of base class
 D.displayDerived();
 D.displayBaseDerived();
+D.process();
 //D.displayBase(); 
 return 0;
 }
