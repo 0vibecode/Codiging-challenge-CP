@@ -31,7 +31,7 @@ class Base{
             return num;
         }
 };
-class Derived:public Base {
+class Derived:private Base {
     public:
         int derived;
         Derived(int setnum) : Base(setnum) {
