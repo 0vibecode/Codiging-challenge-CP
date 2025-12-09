@@ -15,10 +15,13 @@ class Base{
         }
         Base(){} // default constructor
         void displayBase(void){
+            cout<<"--------------Start-----------------"<<endl;
+            cout<<"Calling FROM THE BASE CLASS "<<endl;
             cout<<"The value of num is "<<num<<endl;
+            cout<<"--------------END-----------------"<<endl;
         }
 };
-class Derived:Base {
+class Derived:public Base {
     public:
         int derived;
         Derived(int setnum){
@@ -38,6 +41,6 @@ cout << "Inheritance in C++" << endl;
 Derived D(12); // derived class calling constructor of base class
 D.displayDerived();
 D.displayBaseDerived();
-//D.displayBase(); // cannot be called in private inheritance
+D.displayBase(); // 
 return 0;
 }
