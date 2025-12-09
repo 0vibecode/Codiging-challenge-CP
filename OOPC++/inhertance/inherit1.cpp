@@ -59,8 +59,8 @@ Derived D(12); // derived class calling constructor of base class
 D.displayDerived();
 D.displayBaseDerived();
 D.process();
-int temp = D.getNum(); // this cannot be working
-cout<<"Value from private "<<temp<<endl;
+//int temp = D.getNum(); // this cannot be working
+//cout<<"Value from private "<<temp<<endl;
 //D.displayBase(); 
 return 0;
 }
