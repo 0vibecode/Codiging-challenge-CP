@@ -4,7 +4,7 @@ class Employee{
     protected:
         int id;
     public:
-        //Employee(){}
+        Employee(){}
         Employee(int id){
             id=id;
         }
@@ -13,8 +13,8 @@ class Salary: virtual public Employee{
     protected:
         int sal;
     public:
-        //Salary(){}
-        Salary(int sal,int id):Employee(id){
+        Salary(){}
+        Salary(int sal):Employee(){
             sal = sal;
         }
 };
@@ -22,7 +22,7 @@ class Tax:virtual public Employee{
     protected:
         int tax;
     public:
-        //Tax(){}
+        Tax(){}
         Tax(int tax,int id):Employee(id){
             tax = tax;
         }
@@ -30,8 +30,8 @@ class Tax:virtual public Employee{
 class Grosssalary: public Salary, public Tax {
     public:
         int gross;
-        //Grosssalary(){}
-        Grosssalary(int id, int sal, int tax):Salary(sal,id),Tax(tax,id){
+        Grosssalary(){}
+        Grosssalary(int id, int sal, int tax):Salary(sal),Tax(tax,id){
         }
         void display(){
             //int gross;
