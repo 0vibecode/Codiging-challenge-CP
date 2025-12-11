@@ -16,6 +16,9 @@ class Base2{
 class Derived: public Base1, public Base2 {
     public:
         void display(){}
+        void show(){  // Ambiguity resolution in multiple inheritance
+            Base1::show();
+        }
 };
 int main() {
     cout << "Multiple Inheritance - Ambiguity resolution" << endl;
