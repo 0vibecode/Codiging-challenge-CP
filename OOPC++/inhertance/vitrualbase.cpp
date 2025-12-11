@@ -38,12 +38,8 @@ class Grosssalary: public Salary, public Tax {
     public:
         int gross;
         Grosssalary(){}
-        Grosssalary( int sal, int tax, int id):Employee(id),Salary(sal, id),Tax(tax,id){
-            // gross = sal + tax;
-            // cout<<"Id: "<< id <<endl;
-            // cout<<"Salary: "<< sal <<endl;
-            // cout<<"Tax: "<< tax <<endl;
-            // cout<<"Gross salary: "<< gross <<endl;
+        Grosssalary( int sal, int tax, int id):Employee(id),Salary(sal, id),Tax(tax,id){ // We need to call all the constructors in the derived class.
+           
         }
         void display(){
             //int gross;
