@@ -6,7 +6,8 @@ class Employee{
     public:
         Employee(){}
         Employee(int id){
-            this->id=id;
+            //id=id;   // This is self referencing pointer must for scope resolution
+        this->id=id;
         }
 };
 class Salary:virtual public Employee{
