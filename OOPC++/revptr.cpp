@@ -2,8 +2,8 @@
 using namespace std;
 int main() {
     cout << "Pointer in C++ - new and delete" << endl;
-    int a= 10;
-    int *ptr = &a;
+    //int a= 10;
+    int *ptr = new int(10);
     cout<<"The value of a is using pointer "<<*ptr<<endl; 
     cout<<"The value of address of a is using pointer "<<ptr<<endl; 
     return 0;
