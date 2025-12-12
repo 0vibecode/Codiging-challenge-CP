@@ -1,17 +1,14 @@
 //TODO:Revise as much as possible.
 #include <iostream>
 using namespace std;
-class Base{
+class Base{  // With atleast one pure virtual function this base class become abstract base class
     public:
     int base;
     void setBase(int b){
         base = b;
     }
     virtual void serDerived(int a, int b){}
-    virtual void display(){  // declaring virtual function, that might be implemented in derived classes
-        cout<<"****FROM BASE CLASS**** "<<endl;
-        cout<<"The base value is "<<base<<endl;
-    }
+    virtual void display()=0; // creating pure virtual function
 };
 class Derived1:public Base{
     public:
