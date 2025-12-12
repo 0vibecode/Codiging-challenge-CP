@@ -1,26 +1,13 @@
 class Animal:
-    def __init__(self, name, age):
-        name
-        age
-        # self.name = name
-        # self.age = age
-
-    def setAnimal(self, name, age):
+    def __init__(self, name):
         self.name = name
-        self.age = age
 
-    def getAnimal(self):
-        print("Animal name is", self.name, "and age is", self.age)
+    def info(self):
+        print("Animal name is", self.name)
 
 class Dog(Animal):
-    def __init__(self, name, age):
-        super().setAnimal(name, age)
-
     def sound(self):
         print(self.name, "is bark")
 
-    
-
-d = Dog("Bruno" , 5)
-# d.info()
-d.getAnimal()
+d = Dog("Bruno")
+d.sound()
