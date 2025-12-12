@@ -6,7 +6,7 @@ class Base{
     void setBase(int b){
         base = b;
     }
-    virtual void display(){  // declaring virtual function, that might be implemented in derived classes
+    void display(){  // declaring virtual function, that might be implemented in derived classes
         cout<<"****FROM BASE CLASS**** "<<endl;
         cout<<"The base value is "<<base<<endl;
     }
@@ -45,11 +45,14 @@ class Derived2:public Base{
 };
 int main() {
 cout << "Virtual functions in C++" << endl;
-Derived1 *d1 = new Derived1();
-Derived2 *d2 = new Derived2();
-d1->serDerived(3,4);
-d2->serDerived(300,400);
-d1->display();
-d2->display();
+Base *b1 = new Derived1();
+Base *b2 = new Derived2();
+//Derived1 *d1 = new Derived1();
+//Derived2 *d2 = new Derived2();
+b1->serDerived(3,4);
+b2->serDerived(300,400);
+b1->display();
+b2->display();
+
 return 0;
 }
