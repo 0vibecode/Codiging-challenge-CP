@@ -10,7 +10,7 @@ int main() {
     arr[0] = 10;
     *(arr+1) = 20;
     arr[2] = 30;
-    delete arr;
+    delete[] arr;
     cout<<"The value of arr[0] is using pointer "<<arr[0]<<endl; 
     cout<<"The value of address of arr is using pointer "<<(arr)<<endl; 
     cout<<"The value of arr[1] is using pointer "<<*(arr+1)<<endl; 
