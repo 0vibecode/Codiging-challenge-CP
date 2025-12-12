@@ -6,7 +6,8 @@ class Base{
     void setBase(int b){
         base = b;
     }
-    void display(){  // declaring virtual function, that might be implemented in derived classes
+    virtual void serDerived(){}
+    virtual void display(){  // declaring virtual function, that might be implemented in derived classes
         cout<<"****FROM BASE CLASS**** "<<endl;
         cout<<"The base value is "<<base<<endl;
     }
