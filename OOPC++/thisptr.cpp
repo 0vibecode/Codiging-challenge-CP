@@ -3,7 +3,7 @@ using namespace std;
 class A{
     int a;
     public:
-        A& setVal(int a){
+        A& setVal(int a){  // Retruning object instance reference
             this->a = a; // this is an important keyword for self ref pointer to class object 
             return *this; // returning the object instance through this pointer*****
         }
