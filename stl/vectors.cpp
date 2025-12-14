@@ -17,15 +17,15 @@ int element;
 //int size;
 //cout<<"Enter the size of Vector "<<endl;
 //cin>>size;
-vector<int> v1(3);
+vector<int> v1(3,7);
 //cout<<v1.size();
-for (int i = 0; i < (int)v1.size() ; i++)  // typecasting
-{
-    cout<<"Enter the element at index "<<i<<endl;
-    cin>>element;
-    //v1.push_back(element);
-    v1[i] = element;
-}
+// for (int i = 0; i < (int)v1.size() ; i++)  // typecasting
+// {
+//     cout<<"Enter the element at index "<<i<<endl;
+//     cin>>element;
+//     //v1.push_back(element);
+//     v1[i] = element;
+// }
 display(v1);
 return 0;
 }
