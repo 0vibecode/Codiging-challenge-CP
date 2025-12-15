@@ -21,7 +21,7 @@ int main() {
     
     for (p; p != l1.end(); ++p)
     {
-        cout<<"The value at index  is "<<*p<<endl;
+        cout<<"The value is "<<*p<<endl;
     }
     
 return 0;
