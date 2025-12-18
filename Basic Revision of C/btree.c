@@ -19,5 +19,8 @@ int main() {
     p2->left = NULL;
     p2->right = NULL;
     printf("The tree right node is created \n");
+    // linking the tree node
+    p->left = p1;
+    p->right = p2;
 return 0;
 }
