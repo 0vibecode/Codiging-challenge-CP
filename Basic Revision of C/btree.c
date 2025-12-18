@@ -11,5 +11,13 @@ int main() {
     p->left = NULL;
     p->right = NULL;
     printf("The tree root node is created \n");
+    treeNode *p1 = (treeNode *)malloc(sizeof(treeNode));
+    p1->left = NULL;
+    p1->right = NULL;
+    printf("The tree root left is created \n");
+    treeNode *p2 = (treeNode *)malloc(sizeof(treeNode));
+    p2->left = NULL;
+    p2->right = NULL;
+    printf("The tree right node is created \n");
 return 0;
 }
