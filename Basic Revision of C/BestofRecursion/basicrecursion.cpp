@@ -6,5 +6,9 @@ void message(){
 int main() {
 cout << "Basics of recursion" << endl;
 message();
+message();
+message();
+message();
+message();
 return 0;
 }
