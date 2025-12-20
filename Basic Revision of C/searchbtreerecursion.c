@@ -68,9 +68,9 @@ treeNode* search(treeNode *root, int key){
         return root;
     }
     else if (root->data<key){
-        return search(root->left,key);
-    } else {
         return search(root->right,key);
+    } else {
+        return search(root->left,key);
     }
 }
 int main() {
@@ -93,8 +93,12 @@ int main() {
 
     inOrder(p);
     printf("\n");
-    int res = isBST(p);
-    printf("%d",res);
+    treeNode *res = search(p,12);
+    if(res!=NULL){
+        printf("Found the value: %d \n",res->data);
+    } else {
+        printf("Key not found in the tree \n");
+    }
 
 return 0;
 }
