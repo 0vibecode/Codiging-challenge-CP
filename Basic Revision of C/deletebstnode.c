@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
-//TODO: Implement these functions using C++ objects, STL stack again and finally in python
-//TODO: Revise bigO notation and time and space complexity.
+//TODO: Implement after learning Dynamic programming technique
 
 /*
 Tree Traversal 
