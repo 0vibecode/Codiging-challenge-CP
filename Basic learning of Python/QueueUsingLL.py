@@ -2,12 +2,13 @@ class IsEmptyError(Exception):
     pass
 
 class Queue:
-    class Node:
-
+    # make a samply node for futur creation
+    class Node:   
+        # init function for node class
         def __init__(self, element, next):
             self.element = element
             self.next = next
-
+    # init function for Queue class
     def __init__(self):
         self.head = None
         self.tail = None
@@ -20,6 +21,7 @@ class Queue:
         return print('length of queue is',self.size)
     
     def enqueue(self, element):
+        # this refer to the Node class
         new = self.Node(element,None)
         if self.Is_emplty():
             self.head = new
