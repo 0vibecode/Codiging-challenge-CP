@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    cout << "Iterators in C++ STL" << endl;
+    cout << "Iterators using AUTO in C++ STL" << endl;
     vector<int> v1 = {2,3,5,6,11,3,2,4};
     // vector<int> :: iterator it;
     
