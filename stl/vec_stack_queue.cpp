@@ -11,7 +11,7 @@ for (int i = 0; i < v.size(); i++)
 }
 // Queue implementation using vector
 template <class T>
-void qPop(vector<T> &v, typename vector<T>::iterator iter){
+void qPop(vector<T> &v,  vector<int>::iterator iter){
     v.erase(iter);
 }
 /*
