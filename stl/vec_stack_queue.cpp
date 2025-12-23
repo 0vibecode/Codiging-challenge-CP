@@ -9,6 +9,21 @@ for (int i = 0; i < v.size(); i++)
         cout<<"The vector at index "<<i<<" is "<<v[i]<<endl;
     }
 }
+// Queue implementation using vector
+template <class T>
+void qPop(vector<T> &v, typename vector<T>::iterator iter){
+    v.erase(iter);
+}
+/*
+Short answer: typename tells the compiler “this dependent name is a type.”
+
+Declaration: template<typename T> — typename here is interchangeable with class.
+Disambiguation inside templates: when a name depends on a template parameter the compiler can't know if it names a type or something else, so you must write typename:
+Correct: typename T::iterator it;
+Wrong (error): T::iterator it; // compiler may complain "T::iterator is not a type"
+When not needed: for non-dependent names (e.g. std::vector<int>::iterator) you do not use typename.
+Reason: resolves a parsing ambiguity in templates (the language requires it).
+*/
 int main() {
     cout << "Stack and Queue using vectors and STL" << endl;
     vector<int> vStack;
@@ -26,7 +41,10 @@ int main() {
     // }
     vStack.insert(iter+3,45);
     printData(vStack);
-    vStack.erase(iter);
+    // vStack.erase(iter);
+    qPop(vStack,iter);
     printData(vStack);
+    // vStack.erase(iter+3);
+    // printData(vStack);
 return 0;
 }
