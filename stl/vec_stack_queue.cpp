@@ -16,19 +16,14 @@ int main() {
     vStack.push_back(5);
     vStack.push_back(15);
     vStack.push_back(25);
-    // printData(vStack);
-    // for (int i = 0; i < vStack.size(); i++)
-    // {
-    //     cout<<"The vector at index "<<i<<" is "<<vStack[i]<<endl;
-    // }
-    // vStack.pop_back();
-    // vStack.push_back(0);
-    // for (int i = 0; i < vStack.size(); i++)
-    // {
-    //     cout<<"The vector at index "<<i<<" is "<<vStack[i]<<endl;
-    // }
-  
+      
     printData(vStack);
+    vector<int> :: iterator iter = vStack.begin(); // creating iterator pointer
+    // iter = iter.begin();
+    for (iter; iter != vStack.end(); ++iter)
+    {
+        cout<<"The value is "<<*iter<<endl;
+    }
     
 return 0;
 }
