@@ -26,5 +26,7 @@ int main() {
     // }
     vStack.insert(iter+3,45);
     printData(vStack);
+    vStack.erase(iter+3);
+    printData(vStack);
 return 0;
 }
