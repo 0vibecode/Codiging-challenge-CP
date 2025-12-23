@@ -17,13 +17,14 @@ int main() {
     vStack.push_back(15);
     vStack.push_back(25);
       
-    printData(vStack);
+    //printData(vStack);
     vector<int> :: iterator iter = vStack.begin(); // creating iterator pointer
     // iter = iter.begin();
-    for (iter; iter != vStack.end(); ++iter)
-    {
-        cout<<"The value is "<<*iter<<endl;
-    }
-    
+    // for (iter; iter != vStack.end(); ++iter)
+    // {
+    //     cout<<"The value is "<<*iter<<endl;
+    // }
+    vStack.insert(iter+3,45);
+    printData(vStack);
 return 0;
 }
