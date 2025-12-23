@@ -9,7 +9,7 @@ int main() {
     it = v1.begin();
     for (it; it != v1.end(); it++)
     {
-        cout<<" "<<it<<" ";
+        cout<<" "<<*it<<" ";
     }
     
 return 0;
