@@ -19,8 +19,8 @@ void printMatrix(vector<vector<int>> &vec){ // Traversal of 2D vector
 void printlist(const vector<vector<int>> &g){
     for (size_t i = 0; i < g.size(); ++i) {
         cout << i << ":";
-        for (int v : g[i]) {
-            cout << " " << v;
+        for (auto it = g[i].begin(); it != g[i].end(); ++it) {
+            cout << " " << *it;
         }
         cout << '\n';
     }
