@@ -1,2 +1,5 @@
-vStack.insert(iter+3,45);
-    printData(vStack);
+vector<int> :: iterator it = v1.begin();
+    // for ( it; it = ; i++)
+    // {
+    //     /* code */
+    // }
