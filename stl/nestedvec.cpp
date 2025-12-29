@@ -1,6 +1,13 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+void displayVec1D(vector<int> &v){
+for (int i = 0; i < v.size(); i++)
+    {
+        cout<<" "<<v[i]<< " ";
+    }
+}
 int main() {
     cout << "Nested Vectors" << endl;
     vector<int> v1;
@@ -12,10 +19,7 @@ int main() {
     // {
     //     /* code */
     // }
-    for (int i = 0; i < v1.size(); i++)
-    {
-        cout<<" "<<v1[i]<< " ";
-    }
+    displayVec1D(v1);
     
     
 
