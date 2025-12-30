@@ -34,7 +34,7 @@ int main() {
     // int N;
     // cout<<" Enter the number of element in array "<<endl;
     // cin>>N;
-    vector<int> v1[4];
+    vector<int> v1[4]; // Array of vector - Column is defined but row is dynamic
     v1[0]= {2,5,7,9};
     displayVec1D(v1[0]);
     v1[1]= {12,15,17,19,11};
