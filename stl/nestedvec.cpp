@@ -34,15 +34,30 @@ int main() {
     // int N;
     // cout<<" Enter the number of element in array "<<endl;
     // cin>>N;
-    vector<int> v1[4]; // Array of vector - Column is defined but row is dynamic
-    v1[0]= {2,5,7,9};
-    displayVec1D(v1[0]);
-    v1[1]= {12,15,17,19,11};
-    displayVec1D(v1[1]);
-    v1[2]= {22,25,27};
-    displayVec1D(v1[2]);
-    // last one is zero
-    displayVec1D(v1[3]);
+    int n,m;
+    cout<<"Enter the value of n,m"<<endl;
+    cin>>n>>m;
+    int a[n][m];// Normal array
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            int temp;
+            cout<<"Insert the value at index a["<<i<<"]"<<"["<<j<<"] "<<endl;
+            cin>>temp;
+            a[i][j] = temp;
+        }
+    }
+     for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout<<"Display the value at index a["<<i<<"]"<<"["<<j<<"] "<<" "<<a[i][j]<< " "<<endl;
+            
+            
+        }
+    }   
+
     
     
     
