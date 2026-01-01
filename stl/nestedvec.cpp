@@ -34,29 +34,8 @@ int main() {
     // int N;
     // cout<<" Enter the number of element in array "<<endl;
     // cin>>N;
-    int n,m;
-    cout<<"Enter the value of n,m"<<endl;
-    cin>>n>>m;
-    int a[n][m];// Normal array
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            int temp;
-            cout<<"Insert the value at index a["<<i<<"]"<<"["<<j<<"] "<<endl;
-            cin>>temp;
-            a[i][j] = temp;
-        }
-    }
-     for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            cout<<"Display the value at index a["<<i<<"]"<<"["<<j<<"] "<<" "<<a[i][j]<< " "<<endl;
-            
-            
-        }
-    }   
+    vector<vector<int>> v2; // 2D Vectors
+    
 
     
     
