@@ -34,10 +34,16 @@ int main() {
     // int N;
     // cout<<" Enter the number of element in array "<<endl;
     // cin>>N;
-    vector<vector<int>> v2; // 2D Vectors
+    vector<vector<int>> v2; // 2D Vectors   
+    // vector v2 --> v2[0] --> vector temp push_back
+    vector<int> temp;
+    temp.push_back(2);
+    temp.push_back(3);
+    temp.push_back(5);
+    v2.push_back(temp);
     
-
-    
+    // v2.push_back(3);
+    // v2.push_back(5);
     
     
 
