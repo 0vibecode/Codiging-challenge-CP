@@ -22,6 +22,21 @@ void dataIn1D(int N, vector<int> &v)
         cout << " The value pushed at index " << i << " is " << temp << endl;
     }
 }
+void dataIn2D(int row, int col, vector<vector<int>> &v){
+    for (int i = 0; i < row; i++)
+    {
+        vector<int> temp; // fresh row vector for each i
+        for (int j = 0; j < col; j++)
+        {
+            int data1;
+            cout << "Insert element for row " << i << " col " << j << ": ";
+            cin >> data1;
+            temp.push_back(data1);
+        }
+        v.push_back(temp);
+    }
+
+}
 /*
     v1[0]: [vector elements]
     v1[1]: [vector elements]
@@ -48,20 +63,8 @@ int main()
     // cout<<"Vector v2[0][0] "<<v2[0][0]<<" "<<endl;
     // cout<<"Vector v2[0][1] "<<v2[0][1]<<" "<<endl;
     // cout<<"Vector v2[0][2] "<<v2[0][2]<<" "<<endl;
+    dataIn2D(row,col,v2);
     
-    for (int i = 0; i < row; i++)
-    {
-        vector<int> temp; // fresh row vector for each i
-        for (int j = 0; j < col; j++)
-        {
-            int data1;
-            cout << "Insert element for row " << i << " col " << j << ": ";
-            cin >> data1;
-            temp.push_back(data1);
-        }
-        v2.push_back(temp);
-    }
-
     // Print the entire 2D vector safely
     cout << "Contents of 2D vector:" << endl;
     for (size_t i = 0; i < v2.size(); ++i)
