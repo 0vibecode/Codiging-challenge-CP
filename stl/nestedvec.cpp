@@ -36,11 +36,15 @@ int main() {
     // cin>>N;
     vector<vector<int>> v2; // 2D Vectors   
     // vector v2 --> v2[0] --> vector temp push_back
+    // internal container of vector<int>
     vector<int> temp;
     temp.push_back(2);
     temp.push_back(3);
     temp.push_back(5);
     v2.push_back(temp);
+    cout<<"Vector v2[0][0] "<<v2[0][0]<<" "<<endl;
+    cout<<"Vector v2[0][1] "<<v2[0][1]<<" "<<endl;
+    cout<<"Vector v2[0][2] "<<v2[0][2]<<" "<<endl;
     
     // v2.push_back(3);
     // v2.push_back(5);
