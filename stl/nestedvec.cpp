@@ -37,6 +37,19 @@ void dataIn2D(int row, int col, vector<vector<int>> &v){
     }
 
 }
+
+void display2D(vector<vector<int>> &v){
+cout << "Contents of 2D vector:" << endl;
+    for (size_t i = 0; i < v.size(); ++i)
+    {
+        cout << "Row " << i << ": ";
+        for (size_t j = 0; j < v[i].size(); ++j)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
 /*
     v1[0]: [vector elements]
     v1[1]: [vector elements]
@@ -64,18 +77,9 @@ int main()
     // cout<<"Vector v2[0][1] "<<v2[0][1]<<" "<<endl;
     // cout<<"Vector v2[0][2] "<<v2[0][2]<<" "<<endl;
     dataIn2D(row,col,v2);
-    
+    display2D(v2);
     // Print the entire 2D vector safely
-    cout << "Contents of 2D vector:" << endl;
-    for (size_t i = 0; i < v2.size(); ++i)
-    {
-        cout << "Row " << i << ": ";
-        for (size_t j = 0; j < v2[i].size(); ++j)
-        {
-            cout << v2[i][j] << " ";
-        }
-        cout << endl;
-    }
+    
 
     // v2.push_back(3);
     // v2.push_back(5);
