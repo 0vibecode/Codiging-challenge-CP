@@ -31,16 +31,28 @@ void dataIn1D(int N, vector<int> &v){
     */
 int main() {
     cout << "Nested Vectors" << endl;
-    // int N;
-    // cout<<" Enter the number of element in array "<<endl;
-    // cin>>N;
+    int row,col;
+    cout<<" Enter the number of element in array row and col respectively "<<endl;
+    cin>>row>>col;
     vector<vector<int>> v2; // 2D Vectors   
     // vector v2 --> v2[0] --> vector temp push_back
     // internal container of vector<int>
+    // vector<int> temp;
+    // temp.push_back(2);
+    // temp.push_back(3);
+    // temp.push_back(5);
+    // v2.push_back(temp);
+    // cout<<"Vector v2[0][0] "<<v2[0][0]<<" "<<endl;
+    // cout<<"Vector v2[0][1] "<<v2[0][1]<<" "<<endl;
+    // cout<<"Vector v2[0][2] "<<v2[0][2]<<" "<<endl;
     vector<int> temp;
-    temp.push_back(2);
-    temp.push_back(3);
-    temp.push_back(5);
+    for (int i = 0; i < col; i++)
+    {
+        int data1;
+        cout<<"Insert element for the vector "<<endl;
+        cin>>data1;
+        temp.push_back(data1);
+    }
     v2.push_back(temp);
     cout<<"Vector v2[0][0] "<<v2[0][0]<<" "<<endl;
     cout<<"Vector v2[0][1] "<<v2[0][1]<<" "<<endl;
