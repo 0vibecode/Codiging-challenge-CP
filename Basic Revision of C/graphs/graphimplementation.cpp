@@ -43,10 +43,10 @@ void addVertices(int nodes,vector<vector<int>> &adj){
             // vertex
             for (int j = 0; j < adj[i].size(); ++j) {
                 // Print each adjacent vertex
-                cout << adj[i][j] << " -> ";
+                cout << adj[i][j]<<" ";
             }
             // Indicate the end of the adjacency list
-            cout << "NULL" << endl;
+            cout  << endl;
         }
     }
 int main() {
