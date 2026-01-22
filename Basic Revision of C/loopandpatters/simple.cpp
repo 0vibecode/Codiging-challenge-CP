@@ -78,7 +78,7 @@ void patter6(int n){
             }
             
             //star
-            for (int col = 0; col < 2*n-(2*row+1); col++)
+            for (int col = 0; col < 2*n-(2*row+1); col++) // Everything is about this formula and brackets
             {
                 cout<<"*";
             }
