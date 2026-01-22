@@ -67,9 +67,32 @@ void patter5(int n){
             cout<<endl;
         }
 }
+void patter6(int n){
+    //VIMP:make a small example use case to simulate the logic on paper
+    for (int row = 0; row<n  ; row++)
+        {
+            //space
+            for (int col = 0; col < row; col++)
+            {
+                cout<<" ";
+            }
+            
+            //star
+            for (int col = 0; col < 2*n-(2*row+1); col++)
+            {
+                cout<<"*";
+            }
+            //space            
+            for (int col = 0; col < row; col++)
+            {
+                cout<<" ";
+            }
+            cout<<endl;
+        }
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    patter5(5);
+    patter6(4);
     
 return 0;
 }
