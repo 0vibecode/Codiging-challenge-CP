@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
-int main() {
-    cout << "Loops and pattern basics" << endl;
+void patter1(void){
     int row,col;
     for (int row = 0; row < 5; row++)
     {
@@ -11,6 +10,21 @@ int main() {
         }
         cout<<endl;
     }
+}
+void patter2(void){
+    int row,col;
+    for (int row = 0; row < 5; row++)
+    {
+        for (int col = 0; col <= row; col++) // make sure you put the <= insted of just <
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+int main() {
+    cout << "Loops and pattern basics" << endl;
+    patter2();
     
 return 0;
 }
