@@ -22,9 +22,31 @@ void patter2(void){
         cout<<endl;
     }
 }
+void patter3(void){
+    int row,col;  // printing the row number
+    for (int row = 0; row < 5; row++)
+    {
+        for (int col = 0; col <= row; col++) // make sure you put the <= insted of just <
+        {
+            cout<<row<<" ";
+        }
+        cout<<endl;
+    }
+}
+void patter4(int n){
+    int row,col;  
+    for (int row = 0; row <= n; row++)
+    {
+        for (int col = 0; col < n-row+1 ; col++) // make sure you put the <= insted of just <
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    patter2();
+    patter4(5);
     
 return 0;
 }
