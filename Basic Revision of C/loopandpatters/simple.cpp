@@ -35,9 +35,9 @@ void patter3(void){
 }
 void patter4(int n){
     int row,col;  
-    for (int row = 0; row <= n; row++)
+    for (int row = n; row >0  ; row--)
     {
-        for (int col = 0; col < n-row+1 ; col++) // make sure you put the <= insted of just <
+        for (int col = 0; col < row ; col++) // make sure you put the <= insted of just <
         {
             cout<<"*";
         }
