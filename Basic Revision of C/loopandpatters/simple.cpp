@@ -108,9 +108,27 @@ void patter7(int n){
     }
     
 }
+void pattern8(int n){
+    int start = 1;
+    for (int row = 0; row < n; row++)
+    {
+        if (row%2 == 0)
+        {
+            start = 1;
+        } else {
+            start = start -1;
+        }
+        for (int col = 0; col <= row; col++)
+        {
+            cout<<start;
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    patter7(5);
+    pattern8(5);
     
 return 0;
 }
