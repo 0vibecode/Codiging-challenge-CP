@@ -116,11 +116,12 @@ void pattern8(int n){
         {
             start = 1;
         } else {
-            start = start -1;
+            start=0;
         }
         for (int col = 0; col <= row; col++)
         {
             cout<<start;
+            start = 1-start;
         }
         cout<<endl;
     }
