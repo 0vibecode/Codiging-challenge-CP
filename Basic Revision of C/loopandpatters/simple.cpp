@@ -90,9 +90,27 @@ void patter6(int n){
             cout<<endl;
         }
 }
+void patter7(int n){
+    
+    for (int row = 0; row <= 2*n-1; row++)  
+    {
+        int star = row;
+        if (row>n)
+        {
+            star=2*n-row;   
+        }
+        
+        for (int col = 0; col < star; col++) // start with 1 if <= is used else use only <
+        {
+           cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    patter6(4);
+    patter7(5);
     
 return 0;
 }
