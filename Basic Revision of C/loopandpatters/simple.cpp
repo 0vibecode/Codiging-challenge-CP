@@ -272,6 +272,28 @@ void pattern16(int n){
         spaces+=2;
         cout<<endl;
     }
+    spaces=8;
+    for (int row = 1; row <= n; row++)
+    {
+        //star
+        for (int col = 1; col <=row; col++)
+        {
+            cout<<"*";
+        }
+        //spaces
+        for (int col = 0; col < spaces; col++)
+        {
+            cout<<" ";
+        }
+        
+        //star
+        for (int col = 1; col <=row; col++)
+        {
+            cout<<"*";
+        }
+        spaces-=2;
+        cout<<endl;
+    }
     
 }
 int main() {
