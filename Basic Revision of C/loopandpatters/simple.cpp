@@ -168,9 +168,23 @@ void pattern10(int n){
     }
     
 }
+
+void pattern11(int n){
+    for (int row = 0; row <= n; row++)
+    {
+        for (char colch = 'A'; colch < 'A'+row; colch++)
+        {
+            cout<<colch<<" ";
+            //cout<<int(colch); //ASCII value for A=65 
+
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern10(5);
+    pattern11(5);
     
 return 0;
 }
