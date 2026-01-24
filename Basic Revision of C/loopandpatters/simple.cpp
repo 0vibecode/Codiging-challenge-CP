@@ -182,9 +182,20 @@ void pattern11(int n){
     }
     
 }
+void pattern12(int n){
+    for (int row = 0; row <= n; row++)
+    {
+        for (char ch = 'A'; ch <= 'A'+(n-row-1); ch++)
+        {
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern11(5);
+    pattern12(5);
     
 return 0;
 }
