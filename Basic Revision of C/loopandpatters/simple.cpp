@@ -219,6 +219,7 @@ void pattern14(int n){
             int breakpoints=(2*row+1)/2;
             for (int col = 0; col < 2*row+1; col++)
             {
+                cout<<ch;
                 if (col<breakpoints)
                 {
                     ch++;
@@ -226,7 +227,6 @@ void pattern14(int n){
                     ch--;
                 }
                 
-                cout<<ch<<" ";
             }
             //space            
             for (int col = 0; col < n-row-1; col++)
