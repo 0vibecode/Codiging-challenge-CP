@@ -236,9 +236,21 @@ void pattern14(int n){
             cout<<endl;
         }
 }
+void pattern15(int n){
+    for (int row = 0; row < n; row++)
+    {
+        char ch = 'E';
+        for (char ch = 'E'-row; ch <='E'; ch++)
+        {
+            cout<<ch;
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern14(5);
+    pattern15(5);
     
 return 0;
 }
