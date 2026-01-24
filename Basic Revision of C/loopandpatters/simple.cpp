@@ -250,11 +250,11 @@ void pattern15(int n){
 }
 
 void pattern16(int n){
+    int spaces = 0;
     for (int row = 0; row < n; row++)
     {
-        int spaces = 0;
         //star
-        for (int col = 0; col <=n-row; col++)
+        for (int col = 1; col <=n-row; col++)
         {
             cout<<"*";
         }
@@ -265,7 +265,7 @@ void pattern16(int n){
         }
         
         //star
-        for (int col = 0; col <=n-row; col++)
+        for (int col = 1; col <=n-row; col++)
         {
             cout<<"*";
         }
