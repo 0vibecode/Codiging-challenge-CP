@@ -272,7 +272,7 @@ void pattern16(int n){
         spaces+=2;
         cout<<endl;
     }
-    spaces=8;
+    spaces=2*n-2;
     for (int row = 1; row <= n; row++)
     {
         //star
@@ -296,9 +296,47 @@ void pattern16(int n){
     }
     
 }
+void pattern17(int n){
+    int spaces = 2*n-2;
+    for (int row = 1; row <= 2*n-1; row++)
+    {
+        int star = row;
+        if (row>n)
+        {
+            star = 2*n - row;
+        }
+        //star
+        for (int col = 1; col <= star; col++)
+        {
+            cout<<"*";
+        }
+        
+        //space
+        for (int col = 1; col <= spaces; col++)
+        {
+            cout<<" ";
+        }
+        
+        //star
+        for (int col = 1; col <= star; col++)
+        {
+            cout<<"*";
+        }
+        if (row<n)
+        {
+            spaces-=2;
+        } else {
+            spaces+=2;
+        }
+        
+        cout<<endl;
+    }
+    
+
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern16(5);
+    pattern17(5);
     
 return 0;
 }
