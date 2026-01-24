@@ -155,9 +155,22 @@ void pattern9(int n){
     }
     
 }
+void pattern10(int n){
+    int num=1;
+    for (int row = 1; row <= n; row++)
+    {
+        for (int col = 1; col <= row; col++)
+        {
+            cout<<num;
+            num += 1;
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern9(5);
+    pattern10(5);
     
 return 0;
 }
