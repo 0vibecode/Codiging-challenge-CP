@@ -248,9 +248,35 @@ void pattern15(int n){
     }
     
 }
+
+void pattern16(int n){
+    for (int row = 0; row < n; row++)
+    {
+        int spaces = 0;
+        //star
+        for (int col = 0; col <=n-row; col++)
+        {
+            cout<<"*";
+        }
+        //spaces
+        for (int col = 0; col < spaces; col++)
+        {
+            cout<<" ";
+        }
+        
+        //star
+        for (int col = 0; col <=n-row; col++)
+        {
+            cout<<"*";
+        }
+        spaces+=2;
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern15(5);
+    pattern16(5);
     
 return 0;
 }
