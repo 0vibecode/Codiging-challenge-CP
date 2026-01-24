@@ -127,9 +127,37 @@ void pattern8(int n){
     }
     
 }
+
+void pattern9(int n){
+    int space = 2*(n-1);
+    for (int row = 1; row < n; row++)
+    {
+        //number
+        for (int col = 1; col <= row; col++)
+        {
+            cout<<col;
+        }
+        
+        // space
+        for (int col = 1; col < space; col++)
+        {
+            cout<<" ";
+        }
+        
+
+        // number reverse
+        for (int col = row ; col >= 1; col--)
+        {
+            cout<<col;
+        }
+        cout<<endl;
+        space -=2;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern8(5);
+    pattern9(5);
     
 return 0;
 }
