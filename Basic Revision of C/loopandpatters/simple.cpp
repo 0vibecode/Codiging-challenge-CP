@@ -205,9 +205,40 @@ void pattern13(int n){
     }
     
 }
+void pattern14(int n){
+     for (int row = 0; row <n  ; row++)
+        {
+            //space
+            for (int col = 0; col < n-row-1; col++)
+            {
+                cout<<" ";
+            }
+            
+            //char
+            char ch = 'A';
+            int breakpoints=(2*row+1)/2;
+            for (int col = 0; col < 2*row+1; col++)
+            {
+                if (col<breakpoints)
+                {
+                    ch++;
+                } else {
+                    ch--;
+                }
+                
+                cout<<ch<<" ";
+            }
+            //space            
+            for (int col = 0; col < n-row-1; col++)
+            {
+                cout<<" ";
+            }
+            cout<<endl;
+        }
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern13(5);
+    pattern14(5);
     
 return 0;
 }
