@@ -334,9 +334,26 @@ void pattern17(int n){
     
 
 }
+void pattern18(int n){
+    for (int row = 0; row < n; row++)
+    {
+        for (int col = 0; col < n; col++)
+        {
+            if (row==0||col==0||row==n-1||col==n-1)
+            {
+                cout<<"*";
+            } else {
+                cout<<" ";
+            }
+            
+        }
+        cout<<endl;
+    }
+    
+}
 int main() {
     cout << "Loops and pattern basics" << endl;
-    pattern17(5);
+    pattern18(5);
     
 return 0;
 }
