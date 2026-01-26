@@ -2,19 +2,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void rloop(void){
-    if (count == 5)
+int ct = 0;
+void rloop(){
+    if (ct == 5)
     {
-        return
+        return;
     }
-    cout<<count<<endl;
-    count++;
+    cout<<ct<<endl;
+    ct++;
     rloop();
 }
 int main() {
 
     cout << "Recursion basics" << endl;
-    int count = 0;
+    
     rloop();
 
 return 0;
