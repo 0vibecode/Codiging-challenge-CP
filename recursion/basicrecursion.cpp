@@ -1,15 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-void rloop();  // function prototype
-int main() {
-    int ct = 1;
-    cout << "Recursion basics" << endl;
-    
-    rloop();
-
-return 0;
-}
+//void rloop();  // function prototype
+int ct = 1;  // Global declaration for base condition
 void rloop(){
     if (ct > 5)
     {
@@ -20,11 +13,11 @@ void rloop(){
     rloop();
 }
 
-// int main() {
-//     int ct = 1;
-//     cout << "Recursion basics" << endl;
+int main() {
     
-//     rloop();
+    cout << "Recursion basics" << endl;
+    
+    rloop();
 
-// return 0;
-// }
+return 0;
+}
