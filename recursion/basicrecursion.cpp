@@ -4,7 +4,7 @@ using namespace std;
 
 int ct = 1;
 void rloop(){
-    if (ct <= 5)
+    if (ct >= 5)
     {
         return;
     }
