@@ -3,18 +3,20 @@
 using namespace std;
 int func_summation(int n){
     // int count = 1;
+    int temp;
     // cout<<" The recursion count is "<<count<<endl;
     if (n==0) // base condition
     {
         return 0; // function call close
     }
+    temp  = n + func_summation(n-1);
     // Execution call print
     //cout<<"Current value of i is "<<i<<endl;
     cout<<"Current value of n is "<<n<<endl;
     cout<<"Function called as summation("<<n<<")"<<endl;
-    //cout<<"Function gives output as sum "<<<<endl;
+    cout<<"Function gives output as sum "<<temp<<endl;
     cout<<"---------------------END of execution----------"<<endl;
-    return n + func_summation(n-1); // increment call of i
+    return temp; // increment call of i
     //count++;
 }
 int main() {
