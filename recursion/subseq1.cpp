@@ -25,7 +25,7 @@ void subseq1(int ind,vector<int> &ds, int arr[],int n){
 }
 int main() {
     cout << "Subsequence Detection" << endl;
-    int arr[] = {3,1,2};
+    int arr[] = {1,2,3,4};
     int n=3;
     vector<int> ds;
     subseq1(0,ds,arr,n);
