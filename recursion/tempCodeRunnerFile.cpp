@@ -1,8 +1,4 @@
-int main() {
-//     int ct = 1;
-//     cout << "Recursion basics" << endl;
-    
-//     rloop();
-
-// return 0;
-// }
+if (ds.size()==0)
+        {
+            cout<<"{empty}";
+        }
