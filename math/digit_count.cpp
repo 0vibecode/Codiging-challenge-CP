@@ -7,7 +7,7 @@ void digit_extraction(int N){
     int count;
     while (N>0)
     {
-        lastdigit = N%10;
+        //lastdigit = N%10;
         count += 1;
         //cout<<lastdigit<<endl;
         N = N/10;
