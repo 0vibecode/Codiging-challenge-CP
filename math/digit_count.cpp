@@ -3,15 +3,7 @@
 using namespace std;
 
 void digit_extraction(int N){
-    int lastdigit;
-    int count;
-    while (N>0)
-    {
-        //lastdigit = N%10;
-        count += 1;
-        //cout<<lastdigit<<endl;
-        N = N/10;
-    }
+    int count = (int)(log10(N)+1);
     cout<<"The count is "<<count<<endl;
 }
 int main() {
