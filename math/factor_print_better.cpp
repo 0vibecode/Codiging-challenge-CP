@@ -4,7 +4,7 @@ using namespace std;
 
 void alldivisor(int N){
     vector<int> ds;
-    for (int i = 1; i*i <= N; i++)
+    for (int i = 1; i <= sqrt(N); i++)
     {
         if (N%i == 0)
         {
