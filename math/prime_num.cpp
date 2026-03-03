@@ -4,11 +4,16 @@ using namespace std;
 
 void Prime_num(int N){
     int cnt=0;
-    for (int i = 1; i <= N; i++)
+    for (int i = 1; i*i <= N; i++)
     {
         if (N%i == 0)
         {
             cnt++;
+            if ((N/i != i))
+            {
+                cnt++;
+            }
+            
         }
         
     }
