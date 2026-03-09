@@ -8,7 +8,7 @@ int con2dec(string b){
     int len = b.length();
     
     //cout<<"i val "<<i<<endl;
-    for (int i  = len-1; i >= 0; --i)
+    for (int i  = len-1; i >= 0; --i)  // be careful with decrementing loops
     {
         //cout<<"in loop"<<endl;
         if (b[i] == '1')
