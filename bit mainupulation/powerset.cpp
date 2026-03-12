@@ -11,7 +11,7 @@ vector<vector<int>> powerset(vector<int> d){
     for (int num = 0; num < subset-1; num++)
     {
         vector<int> l1;
-        for (int i = 0; i < num-1 ; i++)
+        for (int i = 0; i < s-1 ; i++)
         {
             if (num && (bitone<<i))
             {
