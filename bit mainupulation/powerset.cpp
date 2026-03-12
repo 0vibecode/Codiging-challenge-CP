@@ -6,12 +6,12 @@ vector<vector<int>> powerset(vector<int> d){
     vector<vector<int>> ans;
     int bitone = 1;
     int s = d.size();
-    int subset = s<<bitone;
+    int subset = bitone<<s;
     
     for (int num = 0; num < subset-1; num++)
     {
         vector<int> l1;
-        for (int i = 0; i < s-1 ; i++)
+        for (int i = 0; i < s ; i++)
         {
             if (num && (bitone<<i))
             {
@@ -29,12 +29,11 @@ int main() {
     vector<vector<int>> z = powerset(data);
     for (auto it:z)
     {
-        cout<<endl;;
         for (auto itin:it)
         {
             cout<<itin<<" ";
         }
-        
+        cout<<endl;  
     }
     
 return 0;
