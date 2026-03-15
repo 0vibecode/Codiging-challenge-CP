@@ -47,7 +47,7 @@ int max_sum_arr(vector<int> arr,int window){
 }
 int main() {
     cout << "Constant sliding window" << endl;
-    vector<int> vec = {2,3,-5,6,7,11,9,5};
+    vector<int> vec = {2,3,-5,6,7,11,9,8};
     int vec_window = 4;
     int res = max_sum_arr(vec,vec_window);
     cout<<"The result is "<<res<<endl;
