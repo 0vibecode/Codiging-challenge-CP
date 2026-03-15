@@ -30,6 +30,9 @@ int max_sum_arr(vector<int> arr,int window){
         max_sum = max(max_sum,mysum);
         if (mysum<max_sum)
         {
+            prev_left = left-1;
+            prev_right = right-1;
+        } else {
             prev_left = left;
             prev_right = right;
         }
@@ -47,7 +50,7 @@ int max_sum_arr(vector<int> arr,int window){
 }
 int main() {
     cout << "Constant sliding window" << endl;
-    vector<int> vec = {2,3,-5,6,7,11,9,8};
+    vector<int> vec = {2,3,-5,6,7,11,9,5};
     int vec_window = 4;
     int res = max_sum_arr(vec,vec_window);
     cout<<"The result is "<<res<<endl;
