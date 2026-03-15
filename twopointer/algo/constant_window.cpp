@@ -9,6 +9,8 @@ int max_sum_arr(vector<int> arr,int window){
     // cout<<arr_length<<endl;
     int left = 0;
     int right = window-1; // in this case its 3 as window = 4
+    int prev_left = 0;
+    int prev_right = 0;
     //cout<<right<<endl;
     int max_sum = 0;
     // get the max sum for the first 4 element
@@ -18,6 +20,7 @@ int max_sum_arr(vector<int> arr,int window){
     }
     //cout<<max_sum<<endl;
     // sliding window with constant window size
+    
     while (right < arr_length-1)  // make sure your sliding window end properly
     {
         int mysum = max_sum - arr[left];
@@ -25,8 +28,21 @@ int max_sum_arr(vector<int> arr,int window){
         right = right +1;
         mysum = mysum + arr[right];
         max_sum = max(max_sum,mysum);
-        cout<<max_sum<<endl;
+        if (mysum<max_sum)
+        {
+            prev_left = left;
+            prev_right = right;
+        }
+        // Variation to store the value of left and right for the maximum sum
+        //cout<<max_sum<<endl;
     } 
+    cout<<"Index of Max_sum left element is "<<prev_left<<endl;
+    cout<<"Index of Max_sum right element is "<<prev_right<<endl;
+    for (int i = prev_left; i <= prev_right; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
     return max_sum;
 }
 int main() {
