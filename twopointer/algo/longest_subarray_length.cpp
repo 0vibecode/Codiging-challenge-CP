@@ -10,27 +10,27 @@ void long_subarr(vector<int> arr,int vec_condition){
     //int right =0; // Global declaration should be avoided
     for (int left = 0; left <= vec_size - 1 ; left++)  // use local declaration of left and right
     {
-        vector<int> temp;
+        //vector<int> temp;
         for (int right = 0; right<vec_size; right++)
         {
             // print loop, we can use condition loop here as well
-            // vector<int> temp;
+             vector<int> temp;
             for (int i = left; i <= right; i++)
             {
                 //cout<<arr[i]<<" ";
                 
                 temp.push_back(arr[i]);
             }
-            // stor.push_back(temp);
+             stor.push_back(temp);
             //cout<<endl;
             //right = right+1;
         }
-        stor.push_back(temp);
+        //stor.push_back(temp);
         //left = left+1;
         //cout<<endl;
     }
     // Display of vector of vector
-     for (auto it1:stor)
+    for (auto it1:stor)
     {
         for (auto it2:it1)
         {
