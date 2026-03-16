@@ -14,7 +14,8 @@ arr = [2,3,6,4,3] and k <= 10
 ##give the longest length or the longest subarray with sum 10 in the given array. 
 ```
 3. Number of possible subarray where certain condition is met - This is extension of pattern above. 
-```
+``` 
+Brute force method will have to generate all the subarray and check the condition on each. Then we have better solution and finally we will have most optimal solution. 
 # example
 arr = [2,3,6,4,3] and k = 10
 ##give the possible subarray with sum = 10 in the given array.
