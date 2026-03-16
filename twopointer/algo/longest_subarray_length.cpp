@@ -5,6 +5,7 @@ using namespace std;
 // simple print function for subarray
 void long_subarr(vector<int> arr,int vec_condition){
     int vec_size = arr.size();
+    vector<vector<int>> stor;
     //int left =0;  // Global declaration should be avoided
     //int right =0; // Global declaration should be avoided
     for (int left = 0; left <= vec_size - 1 ; left++)  // use local declaration of left and right
@@ -14,13 +15,14 @@ void long_subarr(vector<int> arr,int vec_condition){
             // print loop, we can use condition loop here as well
             for (int i = left; i <= right; i++)
             {
-                cout<<arr[i]<<" ";
+                //cout<<arr[i]<<" ";
+                stor[left].push_back(arr[i]);
             }
-            cout<<endl;
+            //cout<<endl;
             //right = right+1;
         }
         //left = left+1;
-        cout<<endl;
+        //cout<<endl;
     }
     
 }
