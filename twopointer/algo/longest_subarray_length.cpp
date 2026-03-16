@@ -2,6 +2,46 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void vec1d_display(vector<int> v1){
+    for (auto it:v1)
+    {
+        cout<<it<<" ";
+    }
+    
+}
+void vec2d_display(vector<vector<int>> vv1){
+    for (auto it1:vv1)
+    {
+        for (auto it2:it1)
+        {
+            cout<<it2<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+int check_condition(vector<vector<int>> vv2, int k){
+    int res = 0;
+    int sum = 0;
+    for (auto it1:vv2)
+    {
+        for (auto it2:it1)
+        {
+            sum = sum + it2;
+            cout<<sum<<" "<<endl;
+        }
+        if (sum == k)
+        {
+            cout<<" Matched "<<k<<" with "<<sum<<endl;
+            res = 1;
+            return res;
+            
+        } 
+        
+    }
+    return res;
+}
+
 // simple print function for subarray
 void long_subarr(vector<int> arr,int vec_condition){
     int vec_size = arr.size();
@@ -30,21 +70,18 @@ void long_subarr(vector<int> arr,int vec_condition){
         //cout<<endl;
     }
     // Display of vector of vector
-    for (auto it1:stor)
-    {
-        for (auto it2:it1)
-        {
-            cout<<it2<<" ";
-        }
-        cout<<endl;
-    }
+    //vec2d_display(stor);
+    int r = check_condition(stor,7);
+    cout<<r<<endl;
     
 }
+
 int main() {
     cout << "Longest subarray " << endl;
     vector<int> vec = {2,3,-5,6,7};
     int vec_condition = 11;
     long_subarr(vec,vec_condition);
+
     //int res = long_subarr(vec,vec_condition);
     //cout<<"The result is "<<res<<endl;
 return 0;
