@@ -10,12 +10,17 @@ void brute_subarr(vector<int> v){
     vector<vector<int>> sub_vec;
     for (int  left = 0; left <= len-1; left++)
     {
-        vector<int> temp;
-        for (int right = left; right < len; right++)
+        for (int right = 0; right < len; right++)
         {
-            temp.push_back(v[right]);
+            vector<int> temp;
+            for (int i = left; i <=right; i++)
+            {
+                /* code */
+                temp.push_back(v[i]);
+            }
+            
+            sub_vec.push_back(temp);
         }
-        sub_vec.push_back(temp);
     }
     // Display loop
     for (auto it:sub_vec)
