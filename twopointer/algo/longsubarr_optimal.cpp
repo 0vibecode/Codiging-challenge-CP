@@ -10,7 +10,7 @@ void long_max_sub(vector<int> v, int c){
     while (right_expand<v.size())
     {
         sum = sum + v[right_expand];
-        while (sum>c)  // Time complexity O(2n)
+        if (sum>c)   // This makes the solution optimal to O(n) instead of O(2n) time complexity
         {
             sum = sum - v[left_shrink];
             left_shrink = left_shrink + 1;
