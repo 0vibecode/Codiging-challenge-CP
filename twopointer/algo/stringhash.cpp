@@ -7,6 +7,7 @@ int main() {
     //string greeting = "Hello";
     string s1 = "abCde";
     string s2 = "abCde";
+    vector<int> v = {1,2,3};
     // Print the string
     //cout << greeting[1];
     //cout<<greeting.size();
@@ -17,8 +18,10 @@ int main() {
     // reverse(greeting.begin(),greeting.end());
     // cout<<greeting;
     hash<string> h;
+    hash<vector> hv;
     cout<<h(s1)<<endl;  // Hashing the string
     cout<<h(s2)<<endl;  // Hashing the string
+    cout<<hv(v)<<endl;  // Hashing the string
 
 return 0;
 }
