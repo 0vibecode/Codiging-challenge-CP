@@ -9,10 +9,11 @@ int main() {
     // Print the string
     //cout << greeting[1];
     //cout<<greeting.size();
-    for (int i = 0; i < greeting.size(); i++)
-    {
-        cout<<greeting[i]<<endl;
-    }
-    
+    // for (int i = 0; i < greeting.size(); i++)
+    // {
+    //     cout<<greeting[i]<<endl;
+    // }
+    reverse(greeting.begin(),greeting.end());
+    cout<<greeting;
 return 0;
 }
