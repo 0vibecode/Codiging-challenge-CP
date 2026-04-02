@@ -7,7 +7,7 @@ int main() {
     string greeting = "Hello";
 
     // Print the string
-    cout << greeting[1];
-
+    //cout << greeting[1];
+    cout<<greeting.size();
 return 0;
 }
