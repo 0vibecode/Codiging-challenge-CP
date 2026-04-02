@@ -8,6 +8,11 @@ int main() {
 
     // Print the string
     //cout << greeting[1];
-    cout<<greeting.size();
+    //cout<<greeting.size();
+    for (int i = 0; i < greeting.size(); i++)
+    {
+        cout<<greeting[i]<<endl;
+    }
+    
 return 0;
 }
