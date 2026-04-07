@@ -18,7 +18,7 @@ int main() {
     // reverse(greeting.begin(),greeting.end());
     // cout<<greeting;
     hash<string> h;
-    hash<vector> hv;
+    hash<vector<int>> hv;
     cout<<h(s1)<<endl;  // Hashing the string
     cout<<h(s2)<<endl;  // Hashing the string
     cout<<hv(v)<<endl;  // Hashing the string
