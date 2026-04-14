@@ -17,6 +17,13 @@ int main() {
         
     }
     m1["xyz"] = 33;  // update the value in map using key
+    m1.erase("cde");  // Erase using key
+    cout<<"After erase"<<endl;
+    for (auto pt:m1)
+    {
+        cout<<pt.first<<"-"<<pt.second<<endl;
+        
+    }
     cout<<"Searching from key"<<endl;
     cout<<"xyz as key, the value is = "<<m1["xyz"]<<endl;
     cout<<"xyz as key, the value is = "<<m1.at("xyz")<<endl;
