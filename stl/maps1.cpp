@@ -3,10 +3,10 @@
 using namespace std;
 int main() {
     cout << "Maps in C++" << endl;
-    unordered_map<string,int> m1 = {  // unordered_map require to have unique key, key collision is not allowed
+    map<string,int> m1 = {  // unordered_map require to have unique key, key collision is not allowed
         {"abc",1},
         {"xyz",3},
-        {"xyz",2}, // this will not store as key is collide, no error is thrown
+        {"xyz",2}, // this will not store as key is collide, key already exists, no error is thrown
     };
     //m1.insert({1,"abc"});
     //m1.insert({2,"cde"});
