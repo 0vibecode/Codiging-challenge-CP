@@ -17,7 +17,7 @@ int main() {
         
     }
     m1["xyz"] = 33;  // update the value in map using key
-    m1.erase("cde");  // Erase using key
+    m1.erase(3);  // Erase using key
     cout<<"After erase"<<endl;
     for (auto pt:m1)
     {
