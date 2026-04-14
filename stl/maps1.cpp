@@ -3,10 +3,10 @@
 using namespace std;
 int main() {
     cout << "Maps in C++" << endl;
-    map<int,int> m1;
-    m1.insert({1,21});
-    m1.insert({2,22});
-    m1.insert({3,23});
+    map<int,string> m1;
+    m1.insert({1,"abc"});
+    m1.insert({2,"cde"});
+    m1.insert({3,"xyz"});
     for (auto pt:m1)
     {
         cout<<pt.first<<"-"<<pt.second<<endl;
