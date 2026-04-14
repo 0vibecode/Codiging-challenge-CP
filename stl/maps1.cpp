@@ -3,10 +3,10 @@
 using namespace std;
 int main() {
     cout << "Maps in C++" << endl;
-    map<int,string> m1 = {
-        {1,"abc"},
-        {3,"cde"},
-        {2,"xyz"}
+    map<string,int> m1 = {
+        {"abc",1},
+        {"cde",2},
+        {"xyz",3}
     };
     //m1.insert({1,"abc"});
     //m1.insert({2,"cde"});
