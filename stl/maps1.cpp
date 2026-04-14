@@ -6,7 +6,7 @@ int main() {
     unordered_map<string,int> m1 = {  // unordered_map require to have unique key, key collision is not allowed
         {"abc",1},
         {"xyz",3},
-        {"cde",2},
+        {"xyz",2}, // this will not store as key is collide, no error is thrown
     };
     //m1.insert({1,"abc"});
     //m1.insert({2,"cde"});
@@ -17,8 +17,8 @@ int main() {
         
     }
     cout<<"Searching from key"<<endl;
-    cout<<"abc as key, the value is = "<<m1["abc"]<<endl;
-    cout<<"abc as key, the value is = "<<m1.at("abc")<<endl;
+    cout<<"xyz as key, the value is = "<<m1["xyz"]<<endl;
+    cout<<"xyz as key, the value is = "<<m1.at("xyz")<<endl;
     
 return 0;
 }
