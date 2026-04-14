@@ -5,8 +5,8 @@ int main() {
     cout << "Maps in C++" << endl;
     map<int,string> m1 = {
         {1,"abc"},
-        {2,"cde"},
-        {3,"xyz"}
+        {3,"cde"},
+        {2,"xyz"}
     };
     //m1.insert({1,"abc"});
     //m1.insert({2,"cde"});
