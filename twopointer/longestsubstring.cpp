@@ -4,29 +4,28 @@ using namespace std;
 int main() {
     cout << "Longest substring" << endl;
     string str = "abcdef";
-    for (int i = 0; i < str.size(); i++)
+    cout<<str.size()<<endl;
+    vector<string> sv;
+    for (int  left = 0; left <= str.size()-1; left++)
     {
-        string sub = "";
-        for (int j = i; j < str.size(); j++)
+        for (int right = 0; right < str.size(); right++)
         {
-            sub = sub + str[j];
+            string temp = "";
+            for (int i = left; i <=right; i++)
+            {
+                /* code */
+                temp = temp + str[i];
+            }
+            
+            sv.push_back(temp);
         }
-        
-        //display string
-        cout<<sub<<endl; 
+    }
+    //display
+    for (auto it:sv)
+    {
+        cout<<it<<endl;
     }
     
-    
-    // for (auto it:s)
-    // {
-    //     string sub = "";
-    //     //cout<<it<<endl;
-    //     for (auto itin:it)
-    //     {
-    //         cout<<itin<<endl;
-    //     }
-        
-    // }
     //     vector<string> substrings;
     //   for (auto start = str.begin(); start != str.end(); ++start) {
     //     for (auto end = start + 1; end <= str.end(); ++end) {
